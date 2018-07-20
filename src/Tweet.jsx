@@ -7,11 +7,10 @@ class Tweet extends Component {
   render() {
     let tweet = this.props.tweet;
     return (
-      <div>
-        {tweet.text}
-        <br />
-        <a href="#" onClick={() => this.props.handleLike(tweet)}>{tweet.liked ? 'Unlike' : 'Like'} Post</a>
-        <a href="#" onClick={() => this.props.deleteTweet(tweet)}>Delete</a>
+      <div class="tweet">
+        <p>{tweet.text}</p>
+        <a class="like-tweet" style={tweet.liked ? {color: '#5CB85C'} : {color: '#888'}} href="javascript:void(0)" onClick={() => this.props.handleLike(tweet)}>{tweet.liked ? 'Liked' : 'Like'}</a>
+        <a class="delete-tweet" href="javascript:void(0)" onClick={() => this.props.deleteTweet(tweet)}>x</a>
       </div>
     );
   }

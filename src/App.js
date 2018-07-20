@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       tweets: [
         {
-          text: "hello sdff!",
+          text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing!",
           liked: false
         },
         {
@@ -26,6 +26,9 @@ class App extends Component {
   }
 
   handleTweet(value) {
+    if(value.trim().length === 0) {
+      return;
+    }
     let tweetObj = {
       text: value,
       liked: false
@@ -36,7 +39,7 @@ class App extends Component {
   }
 
   handleLike(tweet) {
-    let tweets = this.state.tweets.map((t)=> {
+    let tweets = this.state.tweets.map(t => {
       if (t.text === tweet.text) {
         return {
           text: t.text,
@@ -52,7 +55,7 @@ class App extends Component {
   }
 
   handleDelete(tweet) {
-    let tweets = this.state.tweets.filter((t) => {
+    let tweets = this.state.tweets.filter(t => {
       if (t.text !== tweet.text) {
         return t;
       }
@@ -69,17 +72,18 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <div>
-          <div>
-            {this.state.tweets.map(tweet =>
-            <Tweet tweet={tweet}
-              handleLike={this.handleLike.bind(this)}
-              deleteTweet={this.handleDelete.bind(this)}
-            />
-            )}
-          </div>
-          <div>
+        <div class="content">
+          <div class="service">
             <TweetBox onTweet={this.handleTweet.bind(this)} />
+          </div>
+          <div class="cards">
+            {this.state.tweets.map(tweet => (
+              <Tweet
+                tweet={tweet}
+                handleLike={this.handleLike.bind(this)}
+                deleteTweet={this.handleDelete.bind(this)}
+              />
+            ))}
           </div>
         </div>
       </div>

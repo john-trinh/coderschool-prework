@@ -1,5 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+.content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.service {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.tweetbox {
+  position: relative;
+  width: 500px;
+}
+.tweetbox input {
+  font-size: 18px;
+  padding: 20px 100px 20px 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.tweetbox button {
+  position: absolute;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  bottom: 15px;
+  right: 15px;
+  width: 75px;
+  background-color: #5CB85C;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+.tweetbox button:hover {
+  background-color: #449d44;
+  border-color: #419641;
+}
+
+.tweetbox p {
+  position: absolute;
+  font-size: 13px;
+  bottom: 5px;
+  color: #888;
+  right: 95px;
+}
+
+.tweet {
+  position: relative;
+  text-align: left;
+  padding: 30px 20px;
+  margin: 10px 0;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.tweet p {
+  font-size: 20px;
+}
+.tweet .delete-tweet {
+  position: absolute;
+  color: #ccc;
+  top: 10px;
+  right: 15px;
+  text-decoration: none;
+
+}
+.tweet .delete-tweet:hover {
+  color: #888;
+}
+.like-tweet {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #888;
 }
