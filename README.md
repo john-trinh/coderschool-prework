@@ -5,4 +5,4 @@
  - Delete tweets
 
  ## Demo
- ![alt text](https://pasteboard.co/HvjF9LW.gif)
+ ![alt text](react.gif)
