@@ -10,7 +10,8 @@ class App extends Component {
     this.state = {
       tweets: [
         {
-          text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing!",
+          text:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing!",
           liked: false
         },
         {
@@ -26,7 +27,7 @@ class App extends Component {
   }
 
   handleTweet(value) {
-    if(value.trim().length === 0) {
+    if (value.trim().length === 0) {
       return;
     }
     let tweetObj = {
