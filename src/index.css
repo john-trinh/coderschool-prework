@@ -80,7 +80,7 @@ body {
   color: #888;
 }
 .like-tweet {
-  display: block;
+  display: inline-block;
   margin-top: 10px;
   text-decoration: none;
   color: #888;

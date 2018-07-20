@@ -3,3 +3,6 @@
  - Post a tweet
  - Like or unlike a tweet
  - Delete tweets
+
+ ## Demo
+ ![](https://pasteboard.co/HvjF9LW.gif)
